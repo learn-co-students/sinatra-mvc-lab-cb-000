@@ -3,7 +3,7 @@ require 'pry'
 class PigLatinizer
   attr_accessor :user_phrase
 
-  VOWELS = ['a','e','i','o','u']
+    VOWELS = ['a','e','i','o','u']
 
   def initialize(user_phrase)
     @user_phrase = user_phrase
@@ -18,8 +18,11 @@ class PigLatinizer
     end
 
     # Word begins with a Consonant
-    index = word[/aeiou/,1]
-    index
+    index = /aeiou/.match(word,1)
+  end
+
+  def to_pig_latin(user_phrase)
+    @user_phrase.collect {|x| translateWord(x)}.join(" ")
   end
   binding.pry
 end
