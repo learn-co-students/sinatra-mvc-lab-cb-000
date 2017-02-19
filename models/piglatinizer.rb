@@ -12,10 +12,14 @@ class PigLatinizer
   def translateWord(word)
     split_word = word.split("")
 
-    # The word begins with a vowel
+    # Word begins with a vowel
     for i in 0..VOWELS.length
       return split_word.join().to_s + 'way' if split_word[0] == VOWELS[i]
     end
+
+    # Word begins with a Consonant
+    index = word[/aeiou/,1]
+    index
   end
   binding.pry
 end
