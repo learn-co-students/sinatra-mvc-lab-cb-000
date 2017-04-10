@@ -1,7 +1,7 @@
 class PigLatinizer
 
   def piglatinize(word="")
-    if !(word.downcase[0] =~ /[aeiou]/).nil?
+    if word.downcase[0] =~ /[aeiou]/
       word + 'way'
     else
       pos = word.downcase =~ /[aeiou]/
