@@ -1,17 +1,5 @@
 class PigLatinizer
-
-  def count_of_words
-    @text.split(" ").count
-  end
-
-  def count_of_vowels
-    @text.downcase.scan(/[aeoui]/).count
-  end
-
-  def count_of_consonants
-    @text.downcase.scan(/[bcdfghjklmnpqrstvwxyz]/).count
-  end
-
+  
   def constant?(text, letter_position)
     "bcdfghjklmnpqrstvwxyz".chars.include?(text.downcase.chars[letter_position - 1])
   end
