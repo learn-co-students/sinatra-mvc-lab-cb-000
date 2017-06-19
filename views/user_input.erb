@@ -1,11 +1,5 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="UTF-8">
-    <title>title</title>
-  </head>
-  <body>
-    <h1>Pig Latinizer</h1>
-  
-  </body>
-</html>
+    <h2>Submit a phrase to translate it into PIG LATIN!!</h2>
+    <form method="POST" action="<%= INPUT_ACTION %>">
+      <p><%= format_label(PHRASE_SYMBOL) %>: <input type="text" name="<%= PHRASE_SYMBOL.to_s %>"></p>
+      <button type="submit" value="submit">Submit</button>
+    </form>
