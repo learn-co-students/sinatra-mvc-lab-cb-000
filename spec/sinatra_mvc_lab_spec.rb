@@ -1,4 +1,4 @@
-describe "Pig Latinizer App" do
+ describe "Pig Latinizer App" do
   describe "GET '/'" do
     before(:each) do
       get '/'
