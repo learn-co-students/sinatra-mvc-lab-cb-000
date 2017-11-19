@@ -1,5 +1,3 @@
-require "pry"
-
 class PigLatinizer
     attr_reader :text
 
