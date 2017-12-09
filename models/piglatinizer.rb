@@ -6,7 +6,7 @@ class PigLatinizer
       word + "way"
     elsif consonant_start(word)
       cluster = consonant_start(word)
-      word.gsub(/^#{cluster}/,'') + cluster.downcase + "ay"
+      word.gsub(/^#{cluster}/,'') + cluster + "ay"
     end
   end
 
@@ -15,15 +15,19 @@ class PigLatinizer
   end
 
   def consonant_start(word)
-    match_first_char = word[0].match(/^[^aeuiouAEUIOU]/)
-    match_second_char = word[1].match(/^[^aeuiouAEUIOU]/)
-    match_third_char = word[2].match(/^[^aeuiouAEUIOU]/)
-    case
-    when match_first_char && match_second_char && match_third_char
-      word[0..2]
-    when match_first_char && match_second_char
-      word[0..1]
-    when match_first_char
+    if word.size > 2
+      match_first_char = word[0].match(/^[^aeuiouAEUIOU]/)
+      match_second_char = word[1].match(/^[^aeuiouAEUIOU]/)
+      match_third_char = word[2].match(/^[^aeuiouAEUIOU]/)
+      case
+      when match_first_char && match_second_char && match_third_char
+        word[0..2]
+      when match_first_char && match_second_char
+        word[0..1]
+      when match_first_char
+        word[0]
+      end
+    else
       word[0]
     end
   end
