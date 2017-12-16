@@ -6,10 +6,10 @@
   </head>
   <body>
     <h1>Pig Latinizer</h1>
-    <form method="post" action="/">
-      <textarea name="user_text"></textarea>
-      <br>
-      <button type="submit" value="submit">PigLatinize</button>
+    <form method="post" action="/piglatinize">
+      <label for="phrase">Enter your phrase: </label>
+      <input type="text" id="phrase" name="user_phrase">
+      <input type="submit">
     </form>
 
   </body>
