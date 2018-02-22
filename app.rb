@@ -2,8 +2,8 @@ require_relative 'config/environment'
 
 class App < Sinatra::Base
 
-  get '/' do #create a get request path
-    erb :user_input #renders the form from user_input.erb
+  get '/' do
+    erb :user_input
   end
 
   post '/piglatinize' do
