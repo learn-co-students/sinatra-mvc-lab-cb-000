@@ -3,19 +3,16 @@ class PigLatinizer
   attr_accessor :word
 
   def piglatinize(word)
-    # for words that begin w/ constants
-    # pig = ig + p + ay
+    case word
+    when /^[aeiou]/
+        word + "way"
 
-    # for words that begin w/ clusters
-    # string = ing + str + ay
+      else
 
-    # for words that begin w/ vowels
-    # eat = eat + way
-
-    #pork = ork + p + ay
-
-    #first_letters =
-    second_letters = word.slice(/[aeiou]\w+/)
+        after_vowel = word.slice(/[aeiou]\w+/)
+        before_vowel = word.chomp(after_vowel)
+        after_vowel + before_vowel + "ay"
+      end
 
   end
 
