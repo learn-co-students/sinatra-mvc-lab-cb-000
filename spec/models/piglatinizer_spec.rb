@@ -15,12 +15,16 @@ describe 'class PigLatinizer' do
     expect(words.piglatinize("until")).to eq("untilway")
     expect(words.piglatinize("this")).to eq("isthay")
     expect(words.piglatinize("Enumeration")).to eq("Enumerationway")
-    expect(words.piglatinize("spray")).to eq("ayspray")
     expect(words.piglatinize("prays")).to eq("ayspray")
+    expect(words.piglatinize("spray")).to eq("ayspray")
+    
   end
 
   it 'has a method splits the sentence to piglatinize each word' do
     expect(words.piglatinize("i love programming")).to eq("iway ovelay ogrammingpray")
+        expect(words.piglatinize("He was an old man who fished alone in a skiff in the Gulf Stream and he had gone eighty four days now without taking a fish")).to eq("eHay asway anway oldway anmay owhay ishedfay aloneway inway away iffskay inway ethay ulfGay eamStray andway ehay adhay onegay eightyway ourfay aysday ownay ithoutway akingtay away ishfay")
+
+    
   end
 
 end
