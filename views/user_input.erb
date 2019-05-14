@@ -5,7 +5,13 @@
     <title>title</title>
   </head>
   <body>
-    <h1>Pig Latinizer</h1>
-  
+    <h1>Pig Latinizer!</h1>
+    <h2>Welcome to our pig latinizer.  Please fill out the form below and press Submit.</h2>
+
+    <form action='/piglatinize' method=POST>
+      <label>Enter your phrase: <input type="text" name="user_phrase" /></label>
+      <input type="submit" value="Submit" />
+    </form>
+
   </body>
 </html>
